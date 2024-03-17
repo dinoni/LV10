@@ -13,7 +13,7 @@ module seven_segment_decoder_tb;
         .seven_seg_3(seven_seg_3)
         );
 
-    wire [7:0] seven_seg_1;
+    wire [7:0] seven_seg_1; 
     
 
     initial begin
