@@ -1,0 +1,34 @@
+$date
+	Sun Mar 03 13:00:08 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module seven_segment_decoder_tb $end
+$var wire 8 ! out [7:0] $end
+$var reg 4 " in [3:0] $end
+$scope module decoder_instance $end
+$var wire 4 # in [3:0] $end
+$var reg 8 $ out [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b11111001 $
+b1 #
+b1 "
+b11111001 !
+$end
+#1000
+b10000010 !
+b10000010 $
+b110 "
+b110 #
+#11000
