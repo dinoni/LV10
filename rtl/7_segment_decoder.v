@@ -1,5 +1,6 @@
 module seven_segment_decoder(
     input [3:0] isoValue,
+    input clk,
     input [3:0] shutterSpeedValue,
     input [3:0] focalLenghtValue,
     input [2:0] brightnessIndicatorValue,
@@ -106,11 +107,11 @@ function [7:0] decodeindicator;
    begin
     case (value)
     
-        3'b000 begin seven_seg_4=8'b10100100; seven_seg_3=8'b11111111; seven_seg_2=8'b11111111; seven_seg_1=8'b11111111; end //-2 stop
-        3'b001 begin seven_seg_4=8'b11111001; seven_seg_3=8'b11111111; seven_seg_2=8'b11111111; seven_seg_1=8'b11111111; end //-1 stop
-        3'b010 begin seven_seg_4=8'b11111111; seven_seg_3=8'b11111111; seven_seg_2=8'b11111111; seven_seg_1=8'b11000000; end // 0 stop
-        3'b011 begin seven_seg_4=8'b11111111; seven_seg_3=8'b11111111; seven_seg_2=8'b11111111; seven_seg_1=8'b11111001; end //+1 stop
-        3'b100 begin seven_seg_4=8'b11111111; seven_seg_3=8'b11111111; seven_seg_2=8'b11111111; seven_seg_1=8'b10100100; end //+2 stop
+        3'b000: begin seven_seg_4=8'b10100100; seven_seg_3=8'b11111111; seven_seg_2=8'b11111111; seven_seg_1=8'b11111111; end //-2 stop
+        3'b001: begin seven_seg_4=8'b11111001; seven_seg_3=8'b11111111; seven_seg_2=8'b11111111; seven_seg_1=8'b11111111; end //-1 stop
+        3'b010: begin seven_seg_4=8'b11111111; seven_seg_3=8'b11111111; seven_seg_2=8'b11111111; seven_seg_1=8'b11000000; end // 0 stop
+        3'b011: begin seven_seg_4=8'b11111111; seven_seg_3=8'b11111111; seven_seg_2=8'b11111111; seven_seg_1=8'b11111001; end //+1 stop
+        3'b100: begin seven_seg_4=8'b11111111; seven_seg_3=8'b11111111; seven_seg_2=8'b11111111; seven_seg_1=8'b10100100; end //+2 stop
        
         default: decodeindicator =8'b11111111;
     endcase
